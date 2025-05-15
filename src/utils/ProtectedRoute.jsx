@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 // src/utils/ProtectedRoute.jsx
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
