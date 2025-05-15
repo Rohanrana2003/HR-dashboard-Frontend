@@ -1,1 +1,1 @@
-export const BASE_URL = "https://hr-dashborad-backend-1.onrender.com";
+export const BASE_URL = "https://hr-dashborad-backend.onrender.com";
