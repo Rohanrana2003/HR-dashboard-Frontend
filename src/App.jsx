@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Auth from "./components/auth";
+import Auth from "./components/Auth";
 import Body from "./components/Body";
 import { Provider } from "react-redux";
 import appStore from "./utils/redux/appStore";
