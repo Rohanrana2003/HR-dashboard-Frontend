@@ -42,7 +42,7 @@ const CandidatesData = ({ fetchCandidatesData, setShowForm }) => {
       {/* Header section */}
       <section className="header">
         <div className="header-filters">
-          <select id="position" className="">
+          <select id="status" className="">
             <option value="">Status</option>
             <option value="new">New</option>
             <option value="scheduled">Scheduled</option>
@@ -94,13 +94,6 @@ const CandidatesData = ({ fetchCandidatesData, setShowForm }) => {
                     value={candidate.status}
                     onChange={(e) =>
                       handleStatusChange(e.target.value, candidate._id)
-                    }
-                    className={
-                      candidate.status === "selected"
-                        ? "candidate-selected"
-                        : candidate.status === "rejected"
-                        ? "candidate-rejected"
-                        : ""
                     }
                   >
                     <option value="new">New</option>

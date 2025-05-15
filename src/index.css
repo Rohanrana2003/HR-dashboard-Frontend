@@ -330,17 +330,16 @@ a {
 }
 
 .form-header {
-  padding: 20px 25px;
+  padding: 15px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
   background-color: #4d007d;
   color: white;
 }
 .form-header h2 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .close-btn {
@@ -349,7 +348,7 @@ a {
   right: 15px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   color: white;
 }
@@ -523,4 +522,15 @@ select {
 .popup-actions button:nth-child(2) {
   background: #dc2626;
   color: white;
+}
+
+/* Leave */
+.leave-name h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.leave-name p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a4a4a4;
 }
