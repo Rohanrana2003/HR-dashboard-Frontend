@@ -174,12 +174,14 @@ a {
 /* Left Panel */
 .left-panel {
   padding: 40px;
-  width: 13%;
+  min-width: 13%;
   height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: white;
   border-right: 1px solid #e5e5e5;
+  z-index: 1;
 }
 
 .logo-container {
@@ -188,6 +190,12 @@ a {
 }
 .logo-container .logo {
   width: 98px;
+}
+.logo-container div {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: black;
 }
 .left-panel section {
   margin: 20px 0;
@@ -215,6 +223,13 @@ a {
 .left-panel section div p {
   cursor: pointer;
 }
+@media (max-width: 1270px) {
+  .left-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
 
 /* right panel */
 
@@ -230,12 +245,21 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
+.navbar-leftSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .navbar-icons {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-
+.navbar .sidebar-logo {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
 .right-panel {
   width: 100%;
   padding: 20px;
@@ -243,7 +267,11 @@ a {
   flex-direction: column;
   gap: 15px;
 }
-
+@media (max-width: 1270px) {
+  .navbar .sidebar-logo {
+    display: block;
+  }
+}
 /* Header  */
 
 .header {
@@ -282,9 +310,11 @@ a {
   border-radius: 20px;
   background-color: #ffff;
   margin: 10px;
-  overflow: hidden;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+  width: 100%;
 }
+
 .headings-container {
   display: grid;
   grid-template-columns:
@@ -300,7 +330,25 @@ a {
   background-color: #4d007d;
   color: white;
   text-align: start;
+  position: relative;
 }
+.candidate-data-container {
+  display: grid;
+  grid-template-columns:
+    80px /* Sr no. */
+    180px /* Candidate Name */
+    1fr /* Email Address */
+    150px /* Phone Number */
+    130px /* Position */
+    120px /* Status */
+    140px /* Experience */
+    40px; /* Action */
+  padding: 20px;
+  background-color: #ffff;
+  text-align: start;
+  position: relative;
+}
+
 .headings-container li {
   list-style: none;
   font-size: 16px;
@@ -396,22 +444,6 @@ select {
   cursor: not-allowed;
 }
 
-.candidate-data-container {
-  display: grid;
-  grid-template-columns:
-    80px /* Sr no. */
-    180px /* Candidate Name */
-    1fr /* Email Address */
-    150px /* Phone Number */
-    130px /* Position */
-    120px /* Status */
-    140px /* Experience */
-    40px; /* Action */
-  padding: 20px;
-  background-color: #ffff;
-  text-align: start;
-  position: relative;
-}
 .candidate-data-container li {
   list-style: none;
   font-size: 16px;
@@ -477,6 +509,32 @@ select {
 .action-buttons-candidates li:hover {
   background-color: #4d007d;
   color: white;
+}
+
+@media (max-width: 1150px) {
+  .headings-container {
+    width: 970px;
+    grid-template-columns:
+      60px /* Sr no. */
+      150px /* Candidate Name */
+      200px /* Email Address */
+      140px /* Phone Number */
+      130px /* Position */
+      120px /* Status */
+      120px /* Experience */
+      20px; /* Action */
+  }
+  .candidate-data-container {
+    grid-template-columns:
+      60px /* Sr no. */
+      150px /* Candidate Name */
+      200px /* Email Address */
+      140px /* Phone Number */
+      130px /* Position */
+      120px /* Status */
+      120px /* Experience */
+      20px; /* Action */
+  }
 }
 
 /* For Logout POPUP */

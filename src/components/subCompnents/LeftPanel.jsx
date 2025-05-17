@@ -1,11 +1,14 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../utils/constants";
+import { useDispatch } from "react-redux";
+import { setSideBar } from "../../utils/redux/sideBarSlice";
 
 const LeftPanel = () => {
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLogout = async () => {
     try {
@@ -18,9 +21,12 @@ const LeftPanel = () => {
     console.log("Logout clicked");
   };
   return (
-    <div className="left-panel">
+    <div className="">
       <div className="logo-container">
-        <img className="logo" src="/images/Logo.png" alt="logo" />
+        <NavLink to={"/"}>
+          <img className="logo" src="/images/Logo.png" alt="logo" />
+        </NavLink>
+        <div onClick={() => dispatch(setSideBar(false))}>✖</div>
       </div>
 
       <section>

@@ -3,6 +3,7 @@ import userReducer from "./userSlice";
 import candidatesReducer from "./candidatesSlice";
 import employeesSlice from "./employeesSlice";
 import leaveReducer from "./leaveSlice";
+import sideBarSlice from "./sideBarSlice";
 
 const appStore = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const appStore = configureStore({
     candidates: candidatesReducer,
     employees: employeesSlice,
     leaves: leaveReducer,
+    sideBar: sideBarSlice,
   },
 });
 
