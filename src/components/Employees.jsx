@@ -33,7 +33,6 @@ const Employees = () => {
       const res = await axios.get(BASE_URL + "/employees", {
         withCredentials: true,
       });
-      console.log(res.data.data);
       dispatch(addEmployees(res.data.data));
     } catch (err) {
       console.log(err);

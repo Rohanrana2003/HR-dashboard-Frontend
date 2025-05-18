@@ -20,13 +20,21 @@ const LeftPanel = () => {
     }
     console.log("Logout clicked");
   };
+
+  const closeSideBar = () => {
+    if (screen.width >= 1270) return;
+    dispatch(setSideBar(false));
+  };
+
   return (
     <div className="">
       <div className="logo-container">
-        <NavLink to={"/"}>
+        <NavLink to={"/"} onClick={closeSideBar}>
           <img className="logo" src="/images/Logo.png" alt="logo" />
         </NavLink>
-        <div onClick={() => dispatch(setSideBar(false))}>✖</div>
+        {screen.width <= 1270 ? (
+          <div onClick={() => dispatch(setSideBar(false))}>✖</div>
+        ) : null}
       </div>
 
       <section>
@@ -35,6 +43,7 @@ const LeftPanel = () => {
           <img src="/images/candidates-icon.png" alt="logo" />
           <NavLink
             to={"/candidates"}
+            onClick={closeSideBar}
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             Candidates
@@ -48,6 +57,7 @@ const LeftPanel = () => {
           <img src="/images/employees-icon.png" alt="logo" />
           <NavLink
             to={"/employees"}
+            onClick={closeSideBar}
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             Employees
@@ -57,6 +67,7 @@ const LeftPanel = () => {
           <img src="/images/attendance-icon.png" alt="logo" />
           <NavLink
             to={"/attendance"}
+            onClick={closeSideBar}
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             Attendance
@@ -66,6 +77,7 @@ const LeftPanel = () => {
           <img src="/images/leaves-icon.png" alt="logo" />
           <NavLink
             to={"/leaves"}
+            onClick={closeSideBar}
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             Leaves

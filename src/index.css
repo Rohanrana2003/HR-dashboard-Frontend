@@ -240,9 +240,9 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  font-size: 20px;
 }
 .navbar-heading {
-  font-size: 20px;
   font-weight: 500;
 }
 .navbar-leftSection {
@@ -267,6 +267,22 @@ a {
   flex-direction: column;
   gap: 15px;
 }
+
+@media (max-width: 650px) {
+  .navbar {
+    font-size: 16px;
+  }
+  .navbar .sidebar-logo .sidebar-logo {
+    width: 15px;
+  }
+  .navbar-leftSection {
+    gap: 10px;
+  }
+  .navbar-icons {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 1270px) {
   .navbar .sidebar-logo {
     display: block;
@@ -372,7 +388,7 @@ a {
   background: #fff;
   border-radius: 25px;
   overflow: hidden;
-  width: 600px;
+  max-width: 600px;
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -509,6 +525,35 @@ select {
 .action-buttons-candidates li:hover {
   background-color: #4d007d;
   color: white;
+}
+
+@media (max-width: 650px) {
+  .header select {
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px;
+  }
+  .header button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .form-header h2 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .candidate-form {
+    padding: 0px 20px;
+    padding-bottom: 30px;
+    gap: 10px 20px;
+    margin-top: 20px;
+  }
+
+  .candidate-form input,
+  select {
+    padding: 8px 10px;
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 1150px) {

@@ -1,12 +1,10 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setSideBar } from "../../utils/redux/sideBarSlice";
 
 const Navbar = ({ heading }) => {
   const dispatch = useDispatch();
 
-  const sideBar = useSelector((state) => state.sideBar);
-  console.log(sideBar);
   return (
     <div className="navbar">
       <div className="navbar-leftSection">
