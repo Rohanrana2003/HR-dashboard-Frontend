@@ -28,7 +28,7 @@ a {
 }
 /* Auth Page */
 .auth-container {
-  padding: 80px 100px;
+  padding: 40px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,6 @@ a {
 }
 
 .secondary-container {
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,9 +159,30 @@ a {
     width: 100%;
     padding: 40px 20px;
   }
+  .left-text h3 {
+    font-size: 17px;
+  }
+  .left-text p {
+    font-size: 15px;
+  }
   .right-container {
     padding: 30px 30px;
     width: 100%;
+  }
+  .right-container h1 {
+    font-size: 20px;
+  }
+  .right-container form input {
+    font-size: 14px;
+  }
+  .right-container form label {
+    font-size: 15px;
+  }
+  .right-container form button {
+    font-size: 14px;
+  }
+  .form-toggle {
+    font-size: 15px;
   }
 }
 /* Body */
