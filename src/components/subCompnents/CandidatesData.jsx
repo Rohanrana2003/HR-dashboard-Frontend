@@ -118,7 +118,7 @@ const CandidatesData = ({ fetchCandidatesData, setShowForm }) => {
                     <ul className="action-buttons-candidates">
                       <li>
                         <a
-                          href={`https://hirease.site/api${candidate.resumeUrl}`}
+                          href={candidate.resumeUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
